@@ -157,7 +157,10 @@ export default function Page() {
 
   const Brand = () => (
     <a href="#top" className="brand" aria-label="juneBOX">
-      <img src="/junebox-wordmark-dark.png" alt="juneBOX" />
+      <picture>
+        <source srcSet="/junebox-wordmark-cream.webp" type="image/webp" />
+        <img src="/junebox-wordmark-cream.png" alt="juneBOX" width={700} height={164} />
+      </picture>
     </a>
   )
 
