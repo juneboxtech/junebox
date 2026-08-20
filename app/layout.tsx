@@ -1,5 +1,4 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { Analytics } from '@vercel/analytics/next'
 import type { Viewport } from 'next'
 import { GA_MEASUREMENT_ID, organizationJsonLd } from '@/lib/seo'
 import './globals.css'
@@ -22,12 +21,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        {process.env.NODE_ENV === 'production' && (
-          <>
-            <Analytics />
-            <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
-          </>
-        )}
+        {/* Medição fica no GA4. O <Analytics /> da Vercel foi removido porque
+            o recurso Web Analytics nunca foi ativado no projeto: ele carregava
+            um script e não coletava nada. Para voltar a usar, ative em
+            Vercel > Analytics e reponha o componente aqui. */}
+        {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />}
       </body>
     </html>
   )
