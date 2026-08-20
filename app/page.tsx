@@ -478,6 +478,7 @@ export default function Page() {
         </div>
         <div className="footer-bottom">
           <span>{time} BRT</span>
+          <span>{t.footer.legal}</span>
           <span>{t.footer.rights}</span>
           <a href="#top">{t.footer.back} ↑</a>
         </div>
