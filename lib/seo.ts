@@ -1,8 +1,14 @@
 import { dict } from './i18n'
 
 export const SITE_URL = 'https://junebox.com.br'
+
+/** Propriedade juneBOX no Google Analytics. Não é segredo: o ID aparece no
+ *  HTML de qualquer forma, então fica no código em vez de virar variável. */
+export const GA_MEASUREMENT_ID = 'G-32KJTRM0C8'
 export const SLOGAN = 'Tecnologia para requalificar a sua atenção'
-export const CONTACT_EMAIL = 'juny@junebox.com.br'
+/** Endereço público, exibido no site. A entrega do formulário via Resend é
+ *  configurada à parte, em CONTACT_TO, e continua indo para outra caixa. */
+export const CONTACT_EMAIL = 'contato@junebox.com.br'
 export const LINKEDIN = 'https://www.linkedin.com/company/78576520'
 
 /**

@@ -8,6 +8,7 @@ export const dict = {
     htmlLang: 'pt-BR',
     nav: { products: 'Produtos', method: 'Método', how: 'Como funciona', faq: 'FAQ', contact: 'Contato' },
     slogan: 'Tecnologia para requalificar a sua atenção',
+    langLabel: 'Idioma',
     cta: 'Fale com a gente',
     menu: 'Abrir menu',
 
@@ -168,6 +169,7 @@ export const dict = {
     htmlLang: 'en',
     nav: { products: 'Products', method: 'Method', how: 'How it works', faq: 'FAQ', contact: 'Contact' },
     slogan: 'Technology to requalify your attention',
+    langLabel: 'Language',
     cta: 'Get in touch',
     menu: 'Open menu',
 
@@ -328,6 +330,7 @@ export const dict = {
     htmlLang: 'es',
     nav: { products: 'Productos', method: 'Método', how: 'Cómo funciona', faq: 'FAQ', contact: 'Contacto' },
     slogan: 'Tecnología para recualificar tu atención',
+    langLabel: 'Idioma',
     cta: 'Hablá con nosotros',
     menu: 'Abrir menú',
 
@@ -483,3 +486,6 @@ export const dict = {
     },
   },
 } as const
+
+/** Português fica na raiz, que é o idioma principal do .com.br. */
+export const langHref = (lang: Lang) => (lang === 'pt' ? '/' : '/' + lang)

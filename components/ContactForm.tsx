@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import type { dict } from '@/lib/i18n'
-
-export const CONTACT_EMAIL = 'juny@junebox.com.br'
+import { CONTACT_EMAIL } from '@/lib/seo'
 
 /** Cada idioma tem as mesmas chaves, então o tipo usa string em vez do literal do PT. */
 type Copy = Record<keyof (typeof dict)['pt']['contactForm'], string>
