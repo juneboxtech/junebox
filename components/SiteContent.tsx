@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react'
 import ContactForm from '@/components/ContactForm'
+import SocialLinks from '@/components/SocialLinks'
 import { dict, LANGS, langHref, type Lang } from '@/lib/i18n'
-import { CONTACT_EMAIL, LINKEDIN } from '@/lib/seo'
+import { CONTACT_EMAIL } from '@/lib/seo'
 
 const ALENTO = 'https://alento.vc'
 const LURA = 'https://lura.guru'
@@ -284,9 +285,9 @@ export default function SiteContent({ lang }: { lang: Lang }) {
             <p>{t.intro.body}</p>
             <a className="under-link" href="#manifesto">{t.intro.link} <span>↗</span></a>
             <div className="social-links">
-              <a href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn ↗</a>
               <a href={ALENTO} target="_blank" rel="noreferrer">Alento ↗</a>
               <a href={LURA} target="_blank" rel="noreferrer">Lura ↗</a>
+              <SocialLinks label={t.footer.social} />
             </div>
           </div>
         </section>
@@ -473,7 +474,7 @@ export default function SiteContent({ lang }: { lang: Lang }) {
         <div>
           <Eyebrow>{t.footer.contact}</Eyebrow>
           <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-          <a href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <SocialLinks className="social-icons-footer" label={t.footer.social} />
           <LangSwitch className="lang-switch-footer" />
         </div>
         <div className="footer-bottom">

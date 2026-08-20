@@ -10,6 +10,8 @@ export const SLOGAN = 'Tecnologia para requalificar a sua atenção'
  *  configurada à parte, em CONTACT_TO, e continua indo para outra caixa. */
 export const CONTACT_EMAIL = 'contato@junebox.com.br'
 export const LINKEDIN = 'https://www.linkedin.com/company/78576520'
+export const YOUTUBE = 'https://www.youtube.com/@junebox'
+export const FACEBOOK = 'https://www.facebook.com/juneboxtech'
 
 /**
  * Dados estruturados. Além do SEO clássico, isso é o que motores generativos
@@ -32,7 +34,7 @@ export const organizationJsonLd = {
       },
       url: SITE_URL,
       logo: `${SITE_URL}/junebox-favicon.png`,
-      image: `${SITE_URL}/intro-fora-da-caixa.png`,
+      image: `${SITE_URL}/og-junebox.png`,
       slogan: SLOGAN,
       description:
         'Empresa de tecnologia que aplica inteligência artificial já existente para construir produtos digitais que requalificam a atenção. A juneBOX não desenvolve modelos de linguagem próprios: o diferencial está no método, no conteúdo e na curadoria humana que revisa cada etapa.',
@@ -46,7 +48,9 @@ export const organizationJsonLd = {
         'Design de hábito e constância',
         'Curadoria humana de conteúdo',
       ],
-      sameAs: [LINKEDIN, 'https://alento.vc', 'https://lura.guru'],
+      /* sameAs é o que liga o site aos perfis oficiais. Buscadores e motores
+         generativos usam isso para confirmar que se trata da mesma entidade. */
+      sameAs: [LINKEDIN, YOUTUBE, FACEBOOK, 'https://alento.vc', 'https://lura.guru'],
       contactPoint: [
         {
           '@type': 'ContactPoint',
