@@ -246,7 +246,10 @@ export default function Page() {
         {/* ---------- INTRO ---------- */}
         <section className="intro-section">
           <div className="intro-visual" data-reveal>
-            <img src="/junebox-mark-accent.png" alt="Marca juneBOX" />
+            <picture>
+              <source srcSet="/intro-fora-da-caixa.webp" type="image/webp" />
+              <img src="/intro-fora-da-caixa.png" alt={`${t.intro.titleTop} ${t.intro.titleEm}`} />
+            </picture>
             <span>{t.intro.index}</span>
           </div>
           <div className="intro-copy" data-reveal style={{ transitionDelay: '120ms' }}>
