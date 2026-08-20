@@ -7,6 +7,7 @@ export const dict = {
   pt: {
     htmlLang: 'pt-BR',
     nav: { products: 'Produtos', method: 'Método', how: 'Como funciona', faq: 'FAQ', contact: 'Contato' },
+    slogan: 'Tecnologia para requalificar a sua atenção',
     cta: 'Fale com a gente',
     menu: 'Abrir menu',
 
@@ -165,6 +166,7 @@ export const dict = {
   en: {
     htmlLang: 'en',
     nav: { products: 'Products', method: 'Method', how: 'How it works', faq: 'FAQ', contact: 'Contact' },
+    slogan: 'Technology to requalify your attention',
     cta: 'Get in touch',
     menu: 'Open menu',
 
@@ -323,6 +325,7 @@ export const dict = {
   es: {
     htmlLang: 'es',
     nav: { products: 'Productos', method: 'Método', how: 'Cómo funciona', faq: 'FAQ', contact: 'Contacto' },
+    slogan: 'Tecnología para recualificar tu atención',
     cta: 'Hablá con nosotros',
     menu: 'Abrir menú',
 

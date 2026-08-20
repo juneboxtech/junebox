@@ -387,6 +387,8 @@ button { font: inherit; color: inherit }
 /* ---- Footer ---- */
 .rayo-footer { padding: 80px 8vw 30px; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 50px }
 .rayo-footer > div { display: flex; flex-direction: column; gap: 13px }
+.footer-brand { gap: 18px !important }
+.footer-slogan { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; max-width: 30ch }
 .rayo-footer a { color: var(--muted); font-size: 12px }
 .footer-bottom {
   grid-column: 1/-1; border-top: 1px solid var(--line); margin-top: 90px; padding-top: 22px;

@@ -100,7 +100,33 @@ export default function Page() {
     )
 
     targets.forEach((el) => io.observe(el))
-    return () => io.disconnect()
+
+    /* Rede de segurança: o observer não roda enquanto a aba está em segundo
+       plano, e conteúdo preso em opacity 0 é pior do que entrar sem animação.
+       Esta varredura geométrica revela o que já está na tela. */
+    const revealVisible = () => {
+      targets.forEach((el) => {
+        if (el.classList.contains('is-in')) return
+        const rect = el.getBoundingClientRect()
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('is-in')
+          io.unobserve(el)
+        }
+      })
+    }
+
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') revealVisible()
+    }
+
+    const raf = requestAnimationFrame(revealVisible)
+    document.addEventListener('visibilitychange', onVisible)
+
+    return () => {
+      cancelAnimationFrame(raf)
+      document.removeEventListener('visibilitychange', onVisible)
+      io.disconnect()
+    }
   }, [])
 
   const products: Product[] = [
@@ -429,7 +455,10 @@ export default function Page() {
       </main>
 
       <footer className="rayo-footer">
-        <Brand />
+        <div className="footer-brand">
+          <Brand />
+          <p className="footer-slogan">{t.slogan}</p>
+        </div>
         <div>
           <Eyebrow>{t.footer.nav}</Eyebrow>
           <a href="#produtos">{t.nav.products}</a>
