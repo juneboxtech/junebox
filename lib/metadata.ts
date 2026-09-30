@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { dict, LANGS, langHref, type Lang } from './i18n'
-import { SITE_URL } from './seo'
+import { FACEBOOK_DOMAIN_VERIFICATION, SITE_URL } from './seo'
 
 /** Descrição e palavras-chave por idioma, usadas em title, OG e Twitter. */
 const seoCopy: Record<Lang, { description: string; keywords: string[] }> = {
@@ -94,6 +94,11 @@ export function buildMetadata(lang: Lang): Metadata {
       index: true,
       follow: true,
       googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+    },
+    /* Verificacao de dominio do Meta Business, usada para atribuir eventos e
+       anuncios ao dominio. Renderiza <meta name="facebook-domain-verification">. */
+    verification: {
+      other: { 'facebook-domain-verification': FACEBOOK_DOMAIN_VERIFICATION },
     },
     category: 'technology',
   }

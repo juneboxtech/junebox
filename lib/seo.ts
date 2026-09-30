@@ -13,6 +13,9 @@ export const LINKEDIN = 'https://www.linkedin.com/company/78576520'
 export const YOUTUBE = 'https://www.youtube.com/@junebox'
 export const FACEBOOK = 'https://www.facebook.com/juneboxtech'
 
+/** Token de verificacao de dominio do Meta Business. Publico: sai no HTML. */
+export const FACEBOOK_DOMAIN_VERIFICATION = 'wwyy4yf60azxaof0xnwcqw636dd1bn'
+
 /**
  * Dados estruturados. Além do SEO clássico, isso é o que motores generativos
  * leem para responder "o que é a juneBOX" sem precisar interpretar o layout.
