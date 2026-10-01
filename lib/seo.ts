@@ -16,6 +16,9 @@ export const FACEBOOK = 'https://www.facebook.com/juneboxtech'
 /** Token de verificacao de dominio do Meta Business. Publico: sai no HTML. */
 export const FACEBOOK_DOMAIN_VERIFICATION = 'wwyy4yf60azxaof0xnwcqw636dd1bn'
 
+export const LEGAL_NAME = 'juneBOX Tecnologia LTDA'
+export const CNPJ = '38.119.612/0001-70'
+
 /**
  * Dados estruturados. Além do SEO clássico, isso é o que motores generativos
  * leem para responder "o que é a juneBOX" sem precisar interpretar o layout.
@@ -27,13 +30,13 @@ export const organizationJsonLd = {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
       name: 'juneBOX',
-      legalName: 'juneBOX Tecnologia LTDA',
+      legalName: LEGAL_NAME,
       alternateName: 'juneBOX Tecnologia',
-      taxID: '38.119.612/0001-70',
+      taxID: CNPJ,
       identifier: {
         '@type': 'PropertyValue',
         propertyID: 'CNPJ',
-        value: '38119612000170',
+        value: CNPJ.replace(/\D/g, ''),
       },
       url: SITE_URL,
       logo: `${SITE_URL}/junebox-favicon.png`,

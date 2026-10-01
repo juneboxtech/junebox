@@ -582,3 +582,72 @@ button { font: inherit; color: inherit }
 @media (prefers-reduced-motion: reduce) {
   *, *:before, *:after { animation: none !important; transition: none !important; scroll-behavior: auto !important }
 }
+
+/* ===========================================================
+   PÁGINAS LEGAIS (/privacidade)
+   Cabeçalho próprio: o menu do site aponta para âncoras da home,
+   que não existem aqui.
+   =========================================================== */
+.legal-page { min-height: 100vh; background: var(--bg); position: relative }
+
+.legal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding: 28px 8vw; border-bottom: 1px solid var(--line);
+}
+
+.legal-main { padding: clamp(60px, 9vw, 120px) 8vw 0 }
+/* A largura de leitura fica nos filhos. Se ficasse no .legal-main junto com
+   o padding, o box-sizing border-box comeria o espaco util do texto. */
+.legal-main > *,
+.legal-body section { max-width: 780px }
+.legal-main h1 {
+  font-size: clamp(44px, 6vw, 86px); line-height: .9; letter-spacing: -.09em;
+  font-weight: 700; margin: 26px 0 30px;
+}
+.legal-main h1 em { color: var(--accent); font-family: Georgia, serif; font-weight: 400; letter-spacing: -.07em }
+
+.legal-updated { margin: 0 0 30px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted) }
+.legal-lead { margin: 0; font-size: clamp(16px, 1.7vw, 19px); line-height: 1.6; color: var(--paper) }
+
+.legal-note {
+  margin: 30px 0 0; padding: 16px 20px; border-left: 2px solid var(--accent);
+  background: var(--bg-2); color: var(--muted); font-size: 13px; line-height: 1.6;
+}
+
+.legal-body { margin-top: clamp(50px, 6vw, 80px) }
+.legal-body section { padding: 36px 0; border-top: 1px solid var(--line) }
+.legal-body h2 {
+  display: flex; gap: 16px; align-items: baseline;
+  margin: 0 0 18px; font-size: clamp(20px, 2.2vw, 27px);
+  line-height: 1.25; letter-spacing: -.05em; font-weight: 500;
+}
+.legal-body h2 span { flex: none; color: var(--accent); font-size: 11px; letter-spacing: .14em }
+.legal-body p { margin: 0 0 14px; color: var(--muted); font-size: 15px; line-height: 1.7; max-width: 68ch }
+.legal-body p:last-child { margin-bottom: 0 }
+.legal-body ul { margin: 0; padding: 0; list-style: none; max-width: 68ch }
+.legal-body li {
+  position: relative; padding-left: 20px; margin-bottom: 11px;
+  color: var(--muted); font-size: 15px; line-height: 1.7;
+}
+.legal-body li:last-child { margin-bottom: 0 }
+.legal-body li:before { content: ''; position: absolute; left: 0; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent) }
+.legal-body p + ul { margin-top: 4px }
+
+.legal-footer {
+  margin-top: clamp(60px, 8vw, 100px); padding: 50px 8vw;
+  border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: flex-end;
+}
+.legal-footer > div { color: var(--muted); font-size: 12px; text-align: right }
+.legal-footer p { margin: 0 0 6px }
+.legal-footer > div a { color: var(--accent) }
+
+@media (max-width: 800px) {
+  .legal-header { padding: 20px }
+  .legal-main { padding: 60px 20px 0 }
+  .legal-main h1 { font-size: 46px }
+  .legal-body h2 { display: block }
+  .legal-body h2 span { display: block; margin-bottom: 10px }
+  .legal-footer { padding: 40px 20px; justify-content: flex-start; align-items: flex-start }
+  .legal-footer > div { text-align: left }
+}

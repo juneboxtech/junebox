@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import ContactForm from '@/components/ContactForm'
 import SocialLinks from '@/components/SocialLinks'
 import { dict, LANGS, langHref, type Lang } from '@/lib/i18n'
+import { privacyHref } from '@/lib/privacy'
 import { CONTACT_EMAIL } from '@/lib/seo'
 
 const ALENTO = 'https://alento.vc'
@@ -480,6 +481,7 @@ export default function SiteContent({ lang }: { lang: Lang }) {
         <div className="footer-bottom">
           <span>{time} BRT</span>
           <span>{t.footer.legal}</span>
+          <a href={privacyHref(lang)}>{t.footer.privacy}</a>
           <span>{t.footer.rights}</span>
           <a href="#top">{t.footer.back} ↑</a>
         </div>
