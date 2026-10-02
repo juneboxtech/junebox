@@ -80,7 +80,7 @@ export const en: Policy = {
       bullets: [
         'The site code itself writes nothing to your browser. We use no cookies and no local storage for the site to function, including the language switch, which works by address rather than by cookie. The cookies that do exist come from the measurement tools below.',
         'Google Analytics writes its own cookies to tell visits and sessions apart.',
-        'Metricool also writes cookies to count visits and identify where traffic came from.',
+        'Metricool measures the visit through a tracking pixel, which sends the page address, where the visit came from and the screen dimensions, without writing a cookie to your browser.',
         'You can block or clear cookies in your browser settings, or install the Google Analytics opt-out add-on. The site keeps working normally without them.',
       ],
     },

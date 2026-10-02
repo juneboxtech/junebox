@@ -78,7 +78,7 @@ export const pt: Policy = {
       bullets: [
         'O código do próprio site não grava nada no seu navegador. Não usamos cookies nem armazenamento local para o site funcionar, incluindo a troca de idioma, que acontece por endereço e não por cookie. Os cookies que existem vêm das ferramentas de medição abaixo.',
         'O Google Analytics grava cookies próprios para distinguir visitas e sessões.',
-        'O Metricool também grava cookies para contar visitas e identificar a origem do tráfego.',
+        'O Metricool mede a visita por um pixel de rastreamento, que envia o endereço da página, a origem do acesso e as dimensões da tela, sem gravar cookie no seu navegador.',
         'Você pode bloquear ou apagar cookies nas configurações do navegador, ou instalar o complemento de desativação do Google Analytics. O site continua funcionando normalmente sem eles.',
       ],
     },

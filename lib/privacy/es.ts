@@ -80,7 +80,7 @@ export const es: Policy = {
       bullets: [
         'El código del propio sitio no graba nada en tu navegador. No usamos cookies ni almacenamiento local para que el sitio funcione, incluido el cambio de idioma, que ocurre por dirección y no por cookie. Las cookies que existen vienen de las herramientas de medición de abajo.',
         'Google Analytics graba cookies propias para distinguir visitas y sesiones.',
-        'Metricool también graba cookies para contar visitas e identificar el origen del tráfico.',
+        'Metricool mide la visita mediante un pixel de rastreo, que envía la dirección de la página, el origen del acceso y las dimensiones de la pantalla, sin grabar cookie en tu navegador.',
         'Podés bloquear o borrar cookies en la configuración del navegador, o instalar el complemento de desactivación de Google Analytics. El sitio sigue funcionando normalmente sin ellas.',
       ],
     },
