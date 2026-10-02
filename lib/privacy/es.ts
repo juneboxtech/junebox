@@ -54,6 +54,7 @@ export const es: Policy = {
         'Vercel Inc.: aloja el sitio y mantiene los registros técnicos de acceso.',
         'Resend (Plus Five Five, Inc.): entrega el correo generado por el formulario de contacto.',
         'Google LLC: Google Analytics, para las estadísticas de navegación, y Google Workspace, la casilla donde se recibe el mensaje del formulario.',
+        'Metricool (Metricool SL, España): mide el desempeño del sitio y de nuestras redes sociales en un panel único.',
         'Además de esos, podemos compartir datos si la ley o una autoridad competente nos obliga.',
       ],
     },
@@ -77,8 +78,9 @@ export const es: Policy = {
     {
       title: 'Cookies',
       bullets: [
-        'El sitio en sí no graba nada en tu navegador. No usamos cookies propias ni almacenamiento local para funcionar, incluido el cambio de idioma, que ocurre por dirección y no por cookie.',
+        'El código del propio sitio no graba nada en tu navegador. No usamos cookies ni almacenamiento local para que el sitio funcione, incluido el cambio de idioma, que ocurre por dirección y no por cookie. Las cookies que existen vienen de las herramientas de medición de abajo.',
         'Google Analytics graba cookies propias para distinguir visitas y sesiones.',
+        'Metricool también graba cookies para contar visitas e identificar el origen del tráfico.',
         'Podés bloquear o borrar cookies en la configuración del navegador, o instalar el complemento de desactivación de Google Analytics. El sitio sigue funcionando normalmente sin ellas.',
       ],
     },

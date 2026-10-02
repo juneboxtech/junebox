@@ -19,6 +19,9 @@ export const FACEBOOK_DOMAIN_VERIFICATION = 'wwyy4yf60azxaof0xnwcqw636dd1bn'
 export const LEGAL_NAME = 'juneBOX Tecnologia LTDA'
 export const CNPJ = '38.119.612/0001-70'
 
+/** Identificador publico da marca no Metricool. Sai no HTML, nao e segredo. */
+export const METRICOOL_HASH = 'b71481b4d702565e5d001426f4b2710f'
+
 /**
  * Dados estruturados. Além do SEO clássico, isso é o que motores generativos
  * leem para responder "o que é a juneBOX" sem precisar interpretar o layout.

@@ -19,4 +19,4 @@ export type Policy = {
 }
 
 /** Data da última revisão do texto. Mudou a política, muda esta data. */
-export const POLICY_UPDATED = '2026-10-01'
+export const POLICY_UPDATED = '2026-10-02'

@@ -1,4 +1,5 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
+import MetricoolTracker from '@/components/MetricoolTracker'
 import type { Viewport } from 'next'
 import { GA_MEASUREMENT_ID, organizationJsonLd } from '@/lib/seo'
 import './globals.css'
@@ -25,7 +26,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             o recurso Web Analytics nunca foi ativado no projeto: ele carregava
             um script e não coletava nada. Para voltar a usar, ative em
             Vercel > Analytics e reponha o componente aqui. */}
-        {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+            <MetricoolTracker />
+          </>
+        )}
       </body>
     </html>
   )
