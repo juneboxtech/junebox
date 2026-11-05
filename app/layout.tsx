@@ -1,7 +1,8 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
 import MetricoolTracker from '@/components/MetricoolTracker'
 import type { Viewport } from 'next'
-import { GA_MEASUREMENT_ID, organizationJsonLd } from '@/lib/seo'
+import { ADSENSE_CLIENT, GA_MEASUREMENT_ID, organizationJsonLd } from '@/lib/seo'
 import './globals.css'
 
 /* Os metadados de cada idioma vivem na própria rota, via lib/metadata.ts.
@@ -17,6 +18,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="pt-BR" className="dark">
       <body className="antialiased">
+        {/* AdSense entra com beforeInteractive para sair no HTML inicial, dentro
+            do <head>. A verificacao do Google e mais confiavel assim do que
+            dependendo de um script injetado depois da hidratacao. */}
+        {process.env.NODE_ENV === 'production' && (
+          <Script
+            id="adsense"
+            strategy="beforeInteractive"
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
+          />
+        )}
         {children}
         <script
           type="application/ld+json"

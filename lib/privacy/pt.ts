@@ -30,8 +30,9 @@ export const pt: Policy = {
       bullets: [
         'Não vendemos, alugamos nem cedemos seus dados a ninguém.',
         'Não pedimos dados sensíveis, como origem racial, convicção religiosa, opinião política ou informação de saúde.',
-        'Não traçamos perfil comportamental para tomar decisões automatizadas sobre você.',
+        'Não usamos seus dados para tomar decisões automatizadas que afetem você, como aprovação, preço ou recusa de atendimento.',
         'Não enviamos comunicação de marketing para quem escreve pelo formulário, a menos que você peça.',
+        'Não temos acesso individual ao que a publicidade do Google coleta: recebemos apenas relatórios agregados.',
       ],
     },
     {
@@ -51,7 +52,7 @@ export const pt: Policy = {
       bullets: [
         'Vercel Inc.: hospeda o site e mantém os registros técnicos de acesso.',
         'Resend (Plus Five Five, Inc.): entrega o e-mail gerado pelo formulário de contato.',
-        'Google LLC: Google Analytics, para as estatísticas de navegação, e Google Workspace, caixa onde a mensagem do formulário é recebida.',
+        'Google LLC: Google Analytics, para as estatísticas de navegação; Google Workspace, caixa onde a mensagem do formulário é recebida; e Google AdSense, que exibe publicidade no site.',
         'Metricool (Metricool SL, Espanha): mede o desempenho do site e das nossas redes sociais em um painel único.',
         'Além desses, podemos compartilhar dados se formos obrigados por lei ou por ordem de autoridade competente.',
       ],
@@ -78,7 +79,9 @@ export const pt: Policy = {
       bullets: [
         'O código do próprio site não grava nada no seu navegador. Não usamos cookies nem armazenamento local para o site funcionar, incluindo a troca de idioma, que acontece por endereço e não por cookie. Os cookies que existem vêm das ferramentas de medição abaixo.',
         'O Google Analytics grava cookies próprios para distinguir visitas e sessões.',
+        'O Google AdSense grava cookies de publicidade, usados para escolher os anúncios, limitar a repetição e medir desempenho. Dependendo da sua configuração na conta Google, esses anúncios podem ser personalizados a partir do seu histórico de navegação em outros sites.',
         'O Metricool mede a visita por um pixel de rastreamento, que envia o endereço da página, a origem do acesso e as dimensões da tela, sem gravar cookie no seu navegador.',
+        'Você pode desativar a personalização de anúncios em myadcenter.google.com, sem precisar de conta nova.',
         'Você pode bloquear ou apagar cookies nas configurações do navegador, ou instalar o complemento de desativação do Google Analytics. O site continua funcionando normalmente sem eles.',
       ],
     },
